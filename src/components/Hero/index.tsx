@@ -25,7 +25,6 @@ const Hero = ({ blok }: Props) => {
   const content1Ref = useRef(null)
   const content2Ref = useRef(null)
 
-  const container = useRef(null)
   const imageRef = useRef(null)
 
   useEffect(() => {
@@ -34,7 +33,7 @@ const Hero = ({ blok }: Props) => {
       ease: "none",
       scrollTrigger: {
         trigger: "container",
-        scrub: 3
+        scrub: 2
       }
     })
 
@@ -43,7 +42,7 @@ const Hero = ({ blok }: Props) => {
       ease: "none",
       scrollTrigger: {
         trigger: "container",
-        scrub: 3
+        scrub: 2
       }
     })
 

@@ -4,7 +4,7 @@ import { storyblokInit } from "@storyblok/react"
 
 import "../styles/globals.css"
 import { useApollo } from "../lib/apollo/useApollo"
-import { Feature, Grid, Hero, Page, Paragraph, Teaser } from "../components"
+import { Feature, Grid, Hero, Page, RichText, Teaser } from "../components"
 import { LightModeProvider, ThemeProvider } from "../ThemeProvider"
 import TransitionLayout from "../components/Layout"
 import { useEffect } from "react"
@@ -15,7 +15,7 @@ const components = {
   grid: Grid,
   hero: Hero,
   teaser: Teaser,
-  paragraph: Paragraph,
+  paragraph: RichText,
   page: Page,
   news: Page,
   intro: Intro
@@ -37,7 +37,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         top: 0,
         behavior: "smooth"
       })
-    }, 600)
+    }, 500)
   }
 
   useEffect(() => {

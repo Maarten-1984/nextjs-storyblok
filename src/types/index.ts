@@ -1,5 +1,3 @@
-import { SbBlokData } from "@storyblok/react"
-
 export interface ImageType {
   alt?: string
   filename: string

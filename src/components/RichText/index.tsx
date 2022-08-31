@@ -19,7 +19,7 @@ const createMarkup = (storyblokHTML: Richtext) => {
   }
 }
 
-const Paragraph = ({ blok }: Props) => (
+const RichText = ({ blok }: Props) => (
   <Container>
     {blok?.title && <Heading.HeadingTwo>{blok?.title}</Heading.HeadingTwo>}
     <div dangerouslySetInnerHTML={createMarkup(blok.text)} />
@@ -34,4 +34,4 @@ const Container = styled.div`
   line-height: 1.5;
 `
 
-export default Paragraph
+export default RichText

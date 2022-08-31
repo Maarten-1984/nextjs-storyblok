@@ -10,6 +10,7 @@ interface Props {
     _uid: string
     component: string
     headline: string
+    alignment?: boolean
     text: string
     image: ImageType
     link_text: string
@@ -18,7 +19,7 @@ interface Props {
 }
 
 const Teaser = ({ blok }: Props) => (
-  <Container {...storyblokEditable(blok)}>
+  <Container {...storyblokEditable(blok)} alignment={blok?.alignment}>
     <Content>
       <Heading.HeadingTwo>{blok?.headline}</Heading.HeadingTwo>
       <Paragraph>{blok.text}</Paragraph>
@@ -36,9 +37,9 @@ const Teaser = ({ blok }: Props) => (
   </Container>
 )
 
-const Container = styled.div`
+const Container = styled.div<{ alignment?: boolean }>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({ alignment }) => (alignment ? "row-reverse" : "row")};
   justify-content: space-between;
   border: 1px solid #f2f2f2;
 `

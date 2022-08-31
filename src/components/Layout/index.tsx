@@ -1,6 +1,6 @@
 import { useState } from "react"
 import styled from "styled-components"
-import useIsomorphicLayoutEffect from "../hooks/useIsomorphicLayoutEffect"
+import useIsomorphicLayoutEffect from "../../hooks/useIsomorphicLayoutEffect"
 
 interface Props {
   children: React.ReactNode
