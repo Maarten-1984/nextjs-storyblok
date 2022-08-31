@@ -29,6 +29,7 @@ const TransitionLayout = ({ children }: Props) => {
       fadeIn={transitionStage}
     >
       {displayChildren}
+      <Footer>&copy; 2022 - Maarten van der Haar</Footer>
     </Content>
   )
 }
@@ -36,6 +37,11 @@ const TransitionLayout = ({ children }: Props) => {
 const Content = styled.div<{ fadeIn: string }>`
   transition: 0.7s;
   opacity: ${({ fadeIn }) => (fadeIn === "fadeIn" ? 1 : 0)};
+`
+
+const Footer = styled.footer`
+  margin-top: 48px;
+  padding: 24px;
 `
 
 export default TransitionLayout
